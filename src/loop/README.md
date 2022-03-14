@@ -66,8 +66,8 @@ Stream API와 같이 Collection 내부에서 요소들을 반복하며, 각 반�
       1406번 에디터 - https://www.acmicpc.net/problem/1406
 
 
-###5. foreach(향상된 for문)
-<img width="567" alt="foreach" src="https://user-images.githubusercontent.com/78818063/158167728-35c1c348-a776-4365-b782-2a55a7c5de14.png">
+### 5. foreach(향상된 for문)
+<img width="567" alt="foreach" src="https://user-images.githubusercontent.com/78818063/158167728-35c1c348-a776-4365-b782-2a55a7c5de14.png">  
 
 일반 배열과 컬렉션 등 모든 객체에서 사용 가능하며, 각 요소에 직접 매핑된 반복자를 만들어 탐색한다.  
 반복문의 내부적으로 컴파일러가 Iterator를 이용하여 해당 요소를 매핑한다.   
