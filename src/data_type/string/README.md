@@ -84,7 +84,7 @@
 
 <br>
 
-##5. String Class 주요 함수 정리 ##
+## 5. String Class 주요 함수 정리 ##
 다음은 String 클래스에서 자주 사용되는 함수들의 목록으로 이 외에는 공식 문서를 참고하여 사용하자.   
 
 * char charAt(int index) : 특정 index의 char 값을 반환한다.
