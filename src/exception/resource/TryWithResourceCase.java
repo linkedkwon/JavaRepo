@@ -5,7 +5,6 @@ import java.io.*;
 public class TryWithResourceCase {
 
     //case 1 : memory leak on try-catch
-
     public void memoryLeakOnTry(){
         try{
             FileInputStream is = new FileInputStream("resource.txt");
@@ -26,7 +25,6 @@ public class TryWithResourceCase {
     }
 
     //case 2 : return memory on finally
-
     public void useFinally() throws IOException{
         FileInputStream is = null;
         BufferedInputStream bis = null;
@@ -49,7 +47,6 @@ public class TryWithResourceCase {
     }
 
     //case 3 : try-with-resources
-
     void useTryWithResources(){
         try(
             FileInputStream is = new FileInputStream("resource.txt");
@@ -64,42 +61,33 @@ public class TryWithResourceCase {
         }
     }
 
-    void test() throws IOException {
-        memoryLeakOnTry();
-        useFinally();
-        useTryWithResources();
+}
+
+//case 4 : custom class extended autocloseable
+class CustomOBJ implements AutoCloseable{
+
+    public void logic(){
+        System.out.println("java");
+        System.out.println("repo");
+    }
+
+    @Override
+    public void close() throws Exception {
+        //log...
     }
 
 }
 
-    //case 4 : custom class extended autocloseable
+class TryWithResource{
 
-    class CustomOBJ implements AutoCloseable{
-
-        public void logic(){
-            System.out.println("java");
-            System.out.println("repo");
+    public static void main(String[] args){
+        try(
+            CustomOBJ obj = new CustomOBJ();
+        ){
+            obj.logic();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-
-        @Override
-        public void close() throws Exception {
-            //log...
-        }
-
     }
 
-    class TryWithResource{
-
-        public static void main(String[] args){
-            try(
-                CustomOBJ obj = new CustomOBJ();
-            ){
-                obj.logic();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-
-    }
-
-    //ffff
+}
