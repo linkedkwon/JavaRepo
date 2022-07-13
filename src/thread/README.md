@@ -1,4 +1,4 @@
-# 자바 스레드(Tread)
+# 자바 스레드(Thread)
 <a href="http://melonicedlatte.com/">
     <img src="https://img.shields.io/badge/Java-red"
         style="height : auto; margin-left : 8px; margin-right : 8px;"/>
